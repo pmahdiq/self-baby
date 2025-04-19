@@ -3,6 +3,7 @@
 using namespace std;
 class Meal
 {
+    int meal_id;
 
 };
 class DiningHall
