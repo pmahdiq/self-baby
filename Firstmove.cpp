@@ -28,7 +28,35 @@ class Student
         void print();
         void reserve_meal(Meal meal);
         bool cancle_reservation(Reservation res);
+};
 
+class Reservation
+{
+    int reservation_id;
+    Student student;
+    DiningHall dHall;
+    Meal meal;
+    enum status
+    {
+
+    };
+    time_t created_at;
+    public:
+        void setreservation_id(int res_id);
+        void setstudent(Student student);
+        void setdiningHall(DiningHall dHall);
+        void setmael(Meal meal);
+        void setstatus(status status);
+        void setcreated_at(time_t time);
+        int getreservation(); 
+        Student getstudent();
+        DiningHall getdininghall();
+        Meal getmeal();
+        status getstatus();
+        time_t gettime();
+        Reservation();
+        void print();
+        bool cancel();    
 };
 
 
