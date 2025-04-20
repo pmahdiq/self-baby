@@ -1,5 +1,4 @@
 #include <iostream>
-<<<<<<< HEAD
 #include <vector>
 using namespace std;
 enum ghaza
@@ -44,17 +43,6 @@ class DiningHall
     void setters();
 
 };
-int main()
-{
-    
-}
-=======
-
-using namespace std;
-int main()
-{
-
-}
 class Student
 {
     int user_id;
@@ -112,4 +100,3 @@ class Reservation
 
 
 
->>>>>>> 9d8ee5a59dbc4079924b75fb224e5483528e5d03
