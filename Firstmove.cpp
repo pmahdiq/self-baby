@@ -23,8 +23,16 @@ class Meal
     void print();
     void update_price(float new_price);
     void add_side_item(string item);
-    int getters();
-    void setters();
+    void setmeal_id(int meal_id);
+    void setname(string name);
+    void setprice(float price);
+    void setmeal_type(enum meal_type meal_type);
+    void setside_items(vector <ghaza> side_items);
+    int getmeal_id();
+    string getname();
+    float getprice();
+    enum meal_type getmeal_type();
+    vector<ghaza> getside_item();
 
 
 };
@@ -39,8 +47,15 @@ class DiningHall
     public:
     DiningHall();
     void print();
-    int getters();
-    void setters();
+    void sethall_id(int hall_id);
+    void setname(string name);
+    void setaddress(string address);
+    void setcapacity(int capacity);
+    int gethall_id();
+    string getname();
+    string getaddress();
+    int getcapacity();
+    
 
 };
 class Student
