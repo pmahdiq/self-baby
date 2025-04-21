@@ -86,7 +86,7 @@ void Student :: setuser_id(int us_id)
 {
     user_id = us_id;
 }
-void Student :: setstudent_id(string stu_id);
+void Student :: setstudent_id(string stu_id)
 {
     student_id = stu_id;
 }
@@ -123,11 +123,6 @@ bool Student :: getis_active()
     return is_active;
 }
 
-
-
-
-
-
 class Reservation
 {
     int reservation_id;
@@ -156,6 +151,30 @@ class Reservation
         void print();
         bool cancel();    
 };
+void Reservation :: setreservation_id(int res_id)
+{
+    reservation_id = res_id;
+}
+void Reservation :: setstudent(Student student)
+{
+    this -> student = student;
+}
+void Reservation :: setdiningHall(DiningHall dHall)
+{
+    this -> dHall = dHall; 
+}
+void Reservation :: setmael(Meal meal)
+{
+    this -> meal = meal;
+}
+void Reservation :: setstatus(Status status)
+{
+    reservation_id = res_id;
+}
+void Reservation :: setreservation_id(int res_id)
+{
+    reservation_id = res_id;
+} 
 
 
 
