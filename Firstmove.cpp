@@ -96,9 +96,41 @@ class DiningHall
     string getname();
     string getaddress();
     int getcapacity();
-    
-
 };
+
+void DiningHall::sethall_id(int hall_id)
+{
+    this->hall_id=hall_id;
+}
+void DiningHall::setname(string name)
+{
+    this->name=name;
+}
+void DiningHall::setaddress(string address)
+{
+    this->address=address;
+}
+void DiningHall::setcapacity(int capacity)
+{
+    this->capacity=capacity;
+}
+int DiningHall::gethall_id()
+{
+    return hall_id;
+}
+string DiningHall::getname()
+{
+    return name;
+}
+string DiningHall::getaddress()
+{
+    return address;
+}
+int DiningHall::getcapacity()
+{
+    return capacity;
+}
+
 class Student
 {
     int user_id;
