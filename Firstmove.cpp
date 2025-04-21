@@ -1,24 +1,27 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-enum ghaza
-{
-   
-};
-
 class Meal
 {
-    private:
     int meal_id;
     string name;
     float price;
     enum Meal_type
     {
-
+        Breakfast,
+        Lunch,
+        Dinner
+    };
+    enum SideItem
+    {
+        Salad,
+        Soup,
+        yougurt,
+        Drink,
+        fries
     };
     Meal_type meal_type;
-    vector <ghaza> side_items;
-
+    vector <SideItem> side_items;
     public:
     Meal();
     void print();
@@ -28,52 +31,50 @@ class Meal
     void setname(string name);
     void setprice(float price);
     void setmeal_type(Meal_type meal_type);
-    void setside_items(vector <ghaza> side_items);
+    void setside_items(vector <SideItem> side_items);
     int getmeal_id();
     string getname();
     float getprice();
-    Meal::Meal_type getmeal_type();
-    vector<ghaza> getside_item();
-
-
+    Meal_type getmeal_type();
+    vector <SideItem> getside_item();
 };
-void Meal::setmeal_id(int meal_id)
+void Meal :: setmeal_id(int meal_id)
 {
-    this->meal_id=meal_id;
+    this-> meal_id = meal_id;
 }
-void Meal::setname(string name)
+void Meal :: setname(string name)
 {
-    this->name=name;
+    this -> name = name;
 }
-void Meal::setprice(float price)
+void Meal :: setprice(float price)
 {
-    this->price=price;
+    this -> price = price;
 }
-void Meal::setmeal_type(Meal_type meal_type1)
+void Meal :: setmeal_type(Meal_type meal_type1)
 {
-    this->meal_type=meal_type1;
+    this -> meal_type = meal_type1;
 }
-void Meal::setside_items(vector <ghaza> side_items)
+void Meal :: setside_items(vector <SideItem> side_items)
 {
-    this->side_items=side_items;
+    this -> side_items = side_items;
 }
-int Meal::getmeal_id()
+int Meal :: getmeal_id()
 {
     return meal_id;
 }
-string Meal::getname()
+string Meal :: getname()
 {
     return name;
 }
-float Meal::getprice()
+float Meal :: getprice()
 {
     return price;
 }
-Meal::Meal_type Meal::getmeal_type()
+Meal :: Meal_type Meal :: getmeal_type()
 {
     return meal_type;
 }
-vector <ghaza> Meal::getside_item()
+vector <Meal :: SideItem> Meal :: getside_item()
 {
     return side_items;
 }
@@ -98,35 +99,35 @@ class DiningHall
     int getcapacity();
 };
 
-void DiningHall::sethall_id(int hall_id)
+void DiningHall :: sethall_id(int hall_id)
 {
-    this->hall_id=hall_id;
+    this->hall_id = hall_id;
 }
-void DiningHall::setname(string name)
+void DiningHall :: setname(string name)
 {
-    this->name=name;
+    this -> name = name;
 }
-void DiningHall::setaddress(string address)
+void DiningHall :: setaddress(string address)
 {
-    this->address=address;
+    this -> address = address;
 }
-void DiningHall::setcapacity(int capacity)
+void DiningHall :: setcapacity(int capacity)
 {
-    this->capacity=capacity;
+    this -> capacity = capacity;
 }
-int DiningHall::gethall_id()
+int DiningHall :: gethall_id()
 {
     return hall_id;
 }
-string DiningHall::getname()
+string DiningHall :: getname()
 {
     return name;
 }
-string DiningHall::getaddress()
+string DiningHall :: getaddress()
 {
     return address;
 }
-int DiningHall::getcapacity()
+int DiningHall :: getcapacity()
 {
     return capacity;
 }
@@ -225,7 +226,6 @@ class Reservation
         void print();
         bool cancel();    
 };
-<<<<<<< HEAD
 void Reservation :: setreservation_id(int res_id)
 {
     reservation_id = res_id;
@@ -266,7 +266,7 @@ Meal Reservation :: getmeal()
 {
     return meal;
 } 
-Status Reservation :: getstatus()
+Reservation :: Status Reservation :: getstatus()
 {
     return status;
 } 
@@ -275,8 +275,6 @@ time_t Reservation :: gettime()
     return created_at;
 }
 
-=======
->>>>>>> a1cbaa9a32db77717c60a29cfb205590eb1b0662
 
 
 
