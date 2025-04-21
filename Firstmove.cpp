@@ -12,10 +12,11 @@ class Meal
     int meal_id;
     string name;
     float price;
-    enum meal_type
+    enum Meal_type
     {
 
     };
+    Meal_type meal_type;
     vector <ghaza> side_items;
 
     public:
@@ -26,16 +27,56 @@ class Meal
     void setmeal_id(int meal_id);
     void setname(string name);
     void setprice(float price);
-    void setmeal_type(enum meal_type meal_type);
+    void setmeal_type(Meal_type meal_type);
     void setside_items(vector <ghaza> side_items);
     int getmeal_id();
     string getname();
     float getprice();
-    enum meal_type getmeal_type();
+    Meal::Meal_type getmeal_type();
     vector<ghaza> getside_item();
 
 
 };
+void Meal::setmeal_id(int meal_id)
+{
+    this->meal_id=meal_id;
+}
+void Meal::setname(string name)
+{
+    this->name=name;
+}
+void Meal::setprice(float price)
+{
+    this->price=price;
+}
+void Meal::setmeal_type(Meal_type meal_type1)
+{
+    this->meal_type=meal_type1;
+}
+void Meal::setside_items(vector <ghaza> side_items)
+{
+    this->side_items=side_items;
+}
+int Meal::getmeal_id()
+{
+    return meal_id;
+}
+string Meal::getname()
+{
+    return name;
+}
+float Meal::getprice()
+{
+    return price;
+}
+Meal::Meal_type Meal::getmeal_type()
+{
+    return meal_type;
+}
+vector <ghaza> Meal::getside_item()
+{
+    return side_items;
+}
 class DiningHall
 {
     private:
@@ -55,9 +96,41 @@ class DiningHall
     string getname();
     string getaddress();
     int getcapacity();
-    
-
 };
+
+void DiningHall::sethall_id(int hall_id)
+{
+    this->hall_id=hall_id;
+}
+void DiningHall::setname(string name)
+{
+    this->name=name;
+}
+void DiningHall::setaddress(string address)
+{
+    this->address=address;
+}
+void DiningHall::setcapacity(int capacity)
+{
+    this->capacity=capacity;
+}
+int DiningHall::gethall_id()
+{
+    return hall_id;
+}
+string DiningHall::getname()
+{
+    return name;
+}
+string DiningHall::getaddress()
+{
+    return address;
+}
+int DiningHall::getcapacity()
+{
+    return capacity;
+}
+
 class Student
 {
     int user_id;
@@ -152,6 +225,7 @@ class Reservation
         void print();
         bool cancel();    
 };
+<<<<<<< HEAD
 void Reservation :: setreservation_id(int res_id)
 {
     reservation_id = res_id;
@@ -201,6 +275,8 @@ time_t Reservation :: gettime()
     return created_at;
 }
 
+=======
+>>>>>>> a1cbaa9a32db77717c60a29cfb205590eb1b0662
 
 
 
