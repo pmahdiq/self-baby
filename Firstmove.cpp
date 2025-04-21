@@ -129,23 +129,24 @@ class Reservation
     Student student;
     DiningHall dHall;
     Meal meal;
-    enum status
+    enum Status
     {
 
     };
+    Status status;
     time_t created_at;
     public:
         void setreservation_id(int res_id);
         void setstudent(Student student);
         void setdiningHall(DiningHall dHall);
         void setmael(Meal meal);
-        void setstatus(status status);
+        void setstatus(Status status);
         void setcreated_at(time_t time);
-        int getreservation(); 
+        int getreservation_id(); 
         Student getstudent();
         DiningHall getdininghall();
         Meal getmeal();
-        status getstatus();
+        Status getstatus();
         time_t gettime();
         Reservation();
         void print();
@@ -169,12 +170,37 @@ void Reservation :: setmael(Meal meal)
 }
 void Reservation :: setstatus(Status status)
 {
-    reservation_id = res_id;
+    this -> status = status;
 }
-void Reservation :: setreservation_id(int res_id)
+void Reservation :: setcreated_at(time_t created_at)
 {
-    reservation_id = res_id;
+    this -> created_at = created_at;
+}
+int Reservation :: getreservation_id()
+{
+    return reservation_id;
+}
+Student Reservation :: getstudent()
+{
+    return student;
 } 
+DiningHall Reservation :: getdininghall()
+{
+    return dHall;
+} 
+Meal Reservation :: getmeal()
+{
+    return meal;
+} 
+Status Reservation :: getstatus()
+{
+    return status;
+} 
+time_t Reservation :: gettime()
+{
+    return created_at;
+}
+
 
 
 
