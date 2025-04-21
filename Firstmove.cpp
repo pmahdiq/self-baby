@@ -113,16 +113,56 @@ class Student
         void setbalance(float balance);
         void setis_active(bool is_act);
         int getuser_id();
-        int getstudent_id();
-        int getname();
-        int getemail();
-        int getbalance();
-        int getis_active();
+        string getstudent_id();
+        string getname();
+        string getemail();
+        float getbalance();
+        bool getis_active();
         Student();
         void print();
         void reserve_meal(Meal meal);
         bool cancle_reservation(Reservation res);
 };
+void Student :: setuser_id(int us_id)
+{
+    user_id = us_id;
+}
+void Student :: setstudent_id(string stu_id)
+{
+    student_id = stu_id;
+}
+void Student :: setname(string name)
+{
+    this -> name = name;
+}
+void Student :: setemail (string email)
+{
+    this -> email = email;
+}
+void Student :: setis_active (bool is_active)
+{
+    this -> is_active = is_active;
+}
+int Student :: getuser_id()
+{
+    return user_id;
+}
+string Student :: getstudent_id()
+{
+    return student_id;
+}
+string Student :: getname()
+{
+    return name;
+}
+string Student :: getemail()
+{
+    return email;
+}
+bool Student :: getis_active()
+{
+    return is_active;
+}
 
 class Reservation
 {
@@ -152,3 +192,7 @@ class Reservation
         void print();
         bool cancel();    
 };
+
+
+
+
