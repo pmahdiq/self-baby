@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 using namespace std;
 enum Meal_type
 {
@@ -8,13 +9,13 @@ enum Meal_type
     Dinner
 };
 enum SideItem
-    {
-        Salad,
-        Soup,
-        yougurt,
-        Drink,
-        fries
-    };
+{
+    Salad,
+    Soup,
+    yougurt,
+    Drink,
+    fries
+};
 class Meal
 {
     int meal_id;
@@ -225,9 +226,9 @@ class Reservation
     DiningHall dHall;
     Meal meal;
     Status status;
-    time_t created_at;
+    time_t created_at = time(0);
     public:
-        Reservation(int reservaton_id , Student student , DiningHall , Meal meal , Status status , time_t created_at);
+        Reservation(int reservaton_id ,const Student& student , DiningHall , Meal meal , Status status);
         void setreservation_id(int res_id);
         void setstudent(Student student);
         void setdiningHall(DiningHall dHall);
@@ -291,14 +292,11 @@ time_t Reservation::gettime()
 {
     return created_at;
 }
-Reservation::Reservation(int reservaton_id , Student student , DiningHall dHall , Meal meal , Status status , time_t created_at)
+Reservation::Reservation(int reservation_id , const Student& student , DiningHall dHall , Meal meal , Status status)
+: student(student), dHall(dHall), meal(meal), status(status)
 {
     setreservation_id(reservation_id);
-    setstudent(student);
-    setdiningHall(dHall);
-    setmael(meal);
     setstatus(status);
-    setcreated_at(created_at);
 }
 void Reservation::print()
 {
