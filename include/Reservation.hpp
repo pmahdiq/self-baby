@@ -1,3 +1,5 @@
+#pragma once
+
 #include <iostream>
 #include <vector>
 #include <ctime>
@@ -36,78 +38,6 @@ public:
     Meal getmeal();
     Status getstatus();
     time_t gettime();
+    bool cancle();
     void print();
 };
-Reservation::Reservation(int reservation_id, const Student &student, const DiningHall &dHall, const Meal &meal, Status status)
-    : reservation_id(reservation_id), student(student), dHall(dHall), meal(meal), status(status) 
-{
-
-}
-
-void Reservation::setreservation_id(int reservation_id)
-{
-    this->reservation_id = reservation_id;
-}
-
-void Reservation::setstudent(const Student &student)
-{
-    this->student = student;
-}
-
-void Reservation::setdiningHall(const DiningHall &dHall)
-{
-    this->dHall = dHall;
-}
-
-void Reservation::setmeal(const Meal &meal)
-{
-    this->meal = meal;
-}
-
-void Reservation::setstatus(Status status)
-{
-    this->status = status;
-}
-
-void Reservation::setcreated_at(time_t created_at)
-{
-    this->created_at = created_at;
-}
-
-int Reservation::getreservation_id()
-{
-    return reservation_id;
-}
-
-Student Reservation::getstudent()
-{
-    return student;
-}
-
-DiningHall Reservation::getdininghall()
-{
-    return dHall;
-}
-
-Meal Reservation::getmeal()
-{
-    return meal;
-}
-
-Status Reservation::getstatus()
-{
-    return status;
-}
-
-time_t Reservation::gettime()
-{
-    return created_at;
-}
-
-void Reservation::print()
-{
-    student.print();
-    dHall.print();
-    meal.print();
-    cout << "Status: " << status << "\nCreated At: " << ctime(&created_at);
-}
