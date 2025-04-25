@@ -3,6 +3,7 @@
 using namespace std;
 class Meal
 {
+    private:
     int meal_id;
     string name;
     float price;
@@ -23,7 +24,7 @@ class Meal
     Meal_type meal_type;
     vector <SideItem> side_items;
     public:
-    Meal();
+    Meal(int meal_id,string name,float price,Meal_type meal_type,vector <SideItem> side_items);
     void print();
     void update_price(float new_price);
     void add_side_item(string item);
@@ -38,11 +39,46 @@ class Meal
     Meal_type getmeal_type();
     vector <SideItem> getside_item();
 };
-void Meal :: setmeal_id(int meal_id)
+
+Meal::Meal(int meal_id,string name,float price,Meal_type meal_type,vector <SideItem> side_items)
+{
+    setmeal_id(meal_id);
+    setname(name);
+    setprice(price);
+    setmeal_type(meal_type);
+    setside_items(side_items);
+}
+void Meal::print()
+{
+    cout<<"name: "<<name<<"\t"<<"price: "<<price;
+    switch(meal_type)
+    {
+        case Breakfast:
+            cout<<"Breakfast";
+            break;
+        case Lunch:
+            cout<<"Lunch";
+            break;
+        case Dinner:
+            cout<<"Dinner";
+            break;
+        default:
+            cout<<"Unknown Meal Type";
+            break;
+    }
+    
+    for(auto it = getside_item().begin(); it != getside_item().end(); )
+    {
+        cout<<static_cast<int>(*it)<<"\n";
+    }
+
+
+}
+void Meal::setmeal_id(int meal_id)
 {
     this-> meal_id = meal_id;
 }
-void Meal :: setname(string name)
+void Meal::setname(string name)
 {
     this -> name = name;
 }
