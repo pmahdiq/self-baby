@@ -4,11 +4,25 @@
 using namespace std;
 enum Meal_type
 {
+<<<<<<< HEAD
+    private:
+    int meal_id;
+    string name;
+    float price;
+    enum Meal_type
+    {
+        Breakfast,
+        Lunch,
+        Dinner
+    };
+    enum SideItem
+=======
     Breakfast,
     Lunch,
     Dinner
 };
 enum SideItem
+<<<<<<< HEAD
 {
     Salad,
     Soup,
@@ -16,6 +30,16 @@ enum SideItem
     Drink,
     fries
 };
+=======
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
+    {
+        Salad,
+        Soup,
+        yougurt,
+        Drink,
+        fries
+    };
+>>>>>>> 6005e9f30f6dc4a96ba5920f3c7e0228a79449cc
 class Meal
 {
     int meal_id;
@@ -25,6 +49,25 @@ class Meal
     Meal_type meal_type;
     vector <SideItem> side_items;
     public:
+<<<<<<< HEAD
+    Meal(int meal_id,string name,float price,Meal_type meal_type,vector <SideItem> side_items);
+    void print();
+    void update_price(float new_price);
+    void add_side_item(string item);
+    void setmeal_id(int meal_id);
+    void setname(string name);
+    void setprice(float price);
+    void setmeal_type(Meal_type meal_type);
+    void setside_items(vector <SideItem> side_items);
+    int getmeal_id();
+    string getname();
+    float getprice();
+    Meal_type getmeal_type();
+    vector <SideItem> getside_item();
+};
+
+Meal::Meal(int meal_id,string name,float price,Meal_type meal_type,vector <SideItem> side_items)
+=======
         Meal();
         void print();
         void update_price(float new_price);
@@ -41,25 +84,78 @@ class Meal
         vector <SideItem> getside_item();
 };
 void Meal::setmeal_id(int meal_id)
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 {
-    this-> meal_id = meal_id;
+    setmeal_id(meal_id);
+    setname(name);
+    setprice(price);
+    setmeal_type(meal_type);
+    setside_items(side_items);
 }
+<<<<<<< HEAD
+void Meal::print()
+=======
 void Meal::setname(string name)
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 {
-    this -> name = name;
+    cout<<"name: "<<name<<"\t"<<"price: "<<price;
+    switch(meal_type)
+    {
+        case Breakfast:
+            cout<<"Breakfast";
+            break;
+        case Lunch:
+            cout<<"Lunch";
+            break;
+        case Dinner:
+            cout<<"Dinner";
+            break;
+        default:
+            cout<<"Unknown Meal Type";
+            break;
+    }
+    for(auto it = getside_item().begin(); it != getside_item().end(); )
+    {
+        cout<<static_cast<int>(*it)<<"\n";
+    }
+
+
 }
+<<<<<<< HEAD
+void Meal::setmeal_id(int meal_id)
+=======
 void Meal::setprice(float price)
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 {
-    this -> price = price;
+    this->meal_id = meal_id;
 }
+<<<<<<< HEAD
+void Meal::setname(string name)
+=======
+void Meal::setmeal_type(Meal_type meal_type1)
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
+{
+    this->name = name;
+}
+<<<<<<< HEAD
+void Meal::setprice(float price)
+=======
+void Meal::setside_items(vector <SideItem> side_items)
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
+{
+    this->price = price;
+}
+<<<<<<< HEAD
 void Meal::setmeal_type(Meal_type meal_type1)
 {
-    this -> meal_type = meal_type1;
+    this->meal_type = meal_type1;
 }
 void Meal::setside_items(vector <SideItem> side_items)
 {
-    this -> side_items = side_items;
+    this->side_items = side_items;
 }
+=======
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 int Meal::getmeal_id()
 {
     return meal_id;
@@ -72,11 +168,19 @@ float Meal::getprice()
 {
     return price;
 }
+<<<<<<< HEAD
+Meal::Meal_type Meal::getmeal_type()
+{
+    return meal_type;
+}
+vector <Meal::SideItem> Meal::getside_item()
+=======
 Meal_type Meal::getmeal_type()
 {
     return meal_type;
 }
 vector <SideItem> Meal::getside_item()
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 {
     return side_items;
 }
@@ -89,6 +193,18 @@ class DiningHall
     int capacity;
 
     public:
+<<<<<<< HEAD
+    DiningHall(int hall_id,string name,string address,int capacity);
+    void print();
+    void sethall_id(int hall_id);
+    void setname(string name);
+    void setaddress(string address);
+    void setcapacity(int capacity);
+    int gethall_id();
+    string getname();
+    string getaddress();
+    int getcapacity();
+=======
         DiningHall();
         void print();
         void sethall_id(int hall_id);
@@ -99,23 +215,39 @@ class DiningHall
         string getname();
         string getaddress();
         int getcapacity();
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 };
+DiningHall::DiningHall(int hall_id,string name,string address,int capacity)
+{
+    sethall_id(hall_id);
+    setname(name);
+    setaddress(address);
+    setcapacity(capacity);
 
+<<<<<<< HEAD
+}
+
+void DiningHall::print()
+{
+    cout<<"Name: "<<name<<"\t"<<"Address: "<<address<<"\n"<<"capacity: "<<capacity<<"\n";
+}
+=======
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 void DiningHall::sethall_id(int hall_id)
 {
     this -> hall_id = hall_id;
 }
 void DiningHall::setname(string name)
 {
-    this -> name = name;
+    this->name = name;
 }
 void DiningHall::setaddress(string address)
 {
-    this -> address = address;
+    this->address = address;
 }
 void DiningHall::setcapacity(int capacity)
 {
-    this -> capacity = capacity;
+    this->capacity = capacity;
 }
 int DiningHall::gethall_id()
 {
@@ -168,15 +300,15 @@ void Student::setstudent_id(string stu_id)
 }
 void Student::setname(string name)
 {
-    this -> name = name;
+    this->name = name;
 }
 void Student::setemail (string email)
 {
-    this -> email = email;
+    this->email = email;
 }
 void Student::setis_active (bool is_active)
 {
-    this -> is_active = is_active;
+    this->is_active = is_active;
 }
 int Student::getuser_id()
 {
@@ -250,23 +382,23 @@ void Reservation::setreservation_id(int res_id)
 }
 void Reservation::setstudent(Student student)
 {
-    this -> student = student;
+    this->student = student;
 }
 void Reservation::setdiningHall(DiningHall dHall)
 {
-    this -> dHall = dHall; 
+    this->dHall = dHall; 
 }
 void Reservation::setmael(Meal meal)
 {
-    this -> meal = meal;
+    this->meal = meal;
 }
 void Reservation::setstatus(Status status)
 {
-    this -> status = status;
+    this->status = status;
 }
 void Reservation::setcreated_at(time_t created_at)
 {
-    this -> created_at = created_at;
+    this->created_at = created_at;
 }
 int Reservation::getreservation_id()
 {
@@ -284,7 +416,11 @@ Meal Reservation::getmeal()
 {
     return meal;
 } 
+<<<<<<< HEAD
+Reservation::Status Reservation::getstatus()
+=======
 Status Reservation::getstatus()
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
 {
     return status;
 } 
@@ -292,8 +428,14 @@ time_t Reservation::gettime()
 {
     return created_at;
 }
+<<<<<<< HEAD
 Reservation::Reservation(int reservation_id , const Student& student , DiningHall dHall , Meal meal , Status status)
 : student(student), dHall(dHall), meal(meal), status(status)
+=======
+<<<<<<< HEAD
+=======
+Reservation::Reservation(int reservaton_id , Student student , DiningHall dHall , Meal meal , Status status , time_t created_at)
+>>>>>>> 6005e9f30f6dc4a96ba5920f3c7e0228a79449cc
 {
     setreservation_id(reservation_id);
     setstatus(status);
@@ -310,3 +452,4 @@ void Reservation::print()
 
 
 
+>>>>>>> bf1d248c1ecd0e2594db11847ad4e9cdf1e942ff
