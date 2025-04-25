@@ -66,7 +66,6 @@ void Meal::print()
             cout<<"Unknown Meal Type";
             break;
     }
-    
     for(auto it = getside_item().begin(); it != getside_item().end(); )
     {
         cout<<static_cast<int>(*it)<<"\n";
@@ -76,41 +75,41 @@ void Meal::print()
 }
 void Meal::setmeal_id(int meal_id)
 {
-    this-> meal_id = meal_id;
+    this->meal_id = meal_id;
 }
 void Meal::setname(string name)
 {
-    this -> name = name;
+    this->name = name;
 }
-void Meal :: setprice(float price)
+void Meal::setprice(float price)
 {
-    this -> price = price;
+    this->price = price;
 }
-void Meal :: setmeal_type(Meal_type meal_type1)
+void Meal::setmeal_type(Meal_type meal_type1)
 {
-    this -> meal_type = meal_type1;
+    this->meal_type = meal_type1;
 }
-void Meal :: setside_items(vector <SideItem> side_items)
+void Meal::setside_items(vector <SideItem> side_items)
 {
-    this -> side_items = side_items;
+    this->side_items = side_items;
 }
-int Meal :: getmeal_id()
+int Meal::getmeal_id()
 {
     return meal_id;
 }
-string Meal :: getname()
+string Meal::getname()
 {
     return name;
 }
-float Meal :: getprice()
+float Meal::getprice()
 {
     return price;
 }
-Meal :: Meal_type Meal :: getmeal_type()
+Meal::Meal_type Meal::getmeal_type()
 {
     return meal_type;
 }
-vector <Meal :: SideItem> Meal :: getside_item()
+vector <Meal::SideItem> Meal::getside_item()
 {
     return side_items;
 }
@@ -123,7 +122,7 @@ class DiningHall
     int capacity;
 
     public:
-    DiningHall();
+    DiningHall(int hall_id,string name,string address,int capacity);
     void print();
     void sethall_id(int hall_id);
     void setname(string name);
@@ -134,36 +133,48 @@ class DiningHall
     string getaddress();
     int getcapacity();
 };
+DiningHall::DiningHall(int hall_id,string name,string address,int capacity)
+{
+    sethall_id(hall_id);
+    setname(name);
+    setaddress(address);
+    setcapacity(capacity);
 
-void DiningHall :: sethall_id(int hall_id)
+}
+
+void DiningHall::print()
+{
+    cout<<"Name: "<<name<<"\t"<<"Address: "<<address<<"\n"<<"capacity: "<<capacity<<"\n";
+}
+void DiningHall::sethall_id(int hall_id)
 {
     this->hall_id = hall_id;
 }
-void DiningHall :: setname(string name)
+void DiningHall::setname(string name)
 {
-    this -> name = name;
+    this->name = name;
 }
-void DiningHall :: setaddress(string address)
+void DiningHall::setaddress(string address)
 {
-    this -> address = address;
+    this->address = address;
 }
-void DiningHall :: setcapacity(int capacity)
+void DiningHall::setcapacity(int capacity)
 {
-    this -> capacity = capacity;
+    this->capacity = capacity;
 }
-int DiningHall :: gethall_id()
+int DiningHall::gethall_id()
 {
     return hall_id;
 }
-string DiningHall :: getname()
+string DiningHall::getname()
 {
     return name;
 }
-string DiningHall :: getaddress()
+string DiningHall::getaddress()
 {
     return address;
 }
-int DiningHall :: getcapacity()
+int DiningHall::getcapacity()
 {
     return capacity;
 }
@@ -192,43 +203,43 @@ class Student
         void reserve_meal(Meal meal);
         bool cancle_reservation(Reservation res);
 };
-void Student :: setuser_id(int us_id)
+void Student::setuser_id(int us_id)
 {
     user_id = us_id;
 }
-void Student :: setstudent_id(string stu_id)
+void Student::setstudent_id(string stu_id)
 {
     student_id = stu_id;
 }
-void Student :: setname(string name)
+void Student::setname(string name)
 {
-    this -> name = name;
+    this->name = name;
 }
-void Student :: setemail (string email)
+void Student::setemail (string email)
 {
-    this -> email = email;
+    this->email = email;
 }
-void Student :: setis_active (bool is_active)
+void Student::setis_active (bool is_active)
 {
-    this -> is_active = is_active;
+    this->is_active = is_active;
 }
-int Student :: getuser_id()
+int Student::getuser_id()
 {
     return user_id;
 }
-string Student :: getstudent_id()
+string Student::getstudent_id()
 {
     return student_id;
 }
-string Student :: getname()
+string Student::getname()
 {
     return name;
 }
-string Student :: getemail()
+string Student::getemail()
 {
     return email;
 }
-bool Student :: getis_active()
+bool Student::getis_active()
 {
     return is_active;
 }
@@ -262,56 +273,51 @@ class Reservation
         void print();
         bool cancel();    
 };
-void Reservation :: setreservation_id(int res_id)
+void Reservation::setreservation_id(int res_id)
 {
     reservation_id = res_id;
 }
-void Reservation :: setstudent(Student student)
+void Reservation::setstudent(Student student)
 {
-    this -> student = student;
+    this->student = student;
 }
-void Reservation :: setdiningHall(DiningHall dHall)
+void Reservation::setdiningHall(DiningHall dHall)
 {
-    this -> dHall = dHall; 
+    this->dHall = dHall; 
 }
-void Reservation :: setmael(Meal meal)
+void Reservation::setmael(Meal meal)
 {
-    this -> meal = meal;
+    this->meal = meal;
 }
-void Reservation :: setstatus(Status status)
+void Reservation::setstatus(Status status)
 {
-    this -> status = status;
+    this->status = status;
 }
-void Reservation :: setcreated_at(time_t created_at)
+void Reservation::setcreated_at(time_t created_at)
 {
-    this -> created_at = created_at;
+    this->created_at = created_at;
 }
-int Reservation :: getreservation_id()
+int Reservation::getreservation_id()
 {
     return reservation_id;
 }
-Student Reservation :: getstudent()
+Student Reservation::getstudent()
 {
     return student;
 } 
-DiningHall Reservation :: getdininghall()
+DiningHall Reservation::getdininghall()
 {
     return dHall;
 } 
-Meal Reservation :: getmeal()
+Meal Reservation::getmeal()
 {
     return meal;
 } 
-Reservation :: Status Reservation :: getstatus()
+Reservation::Status Reservation::getstatus()
 {
     return status;
 } 
-time_t Reservation :: gettime()
+time_t Reservation::gettime()
 {
     return created_at;
 }
-
-
-
-
-
