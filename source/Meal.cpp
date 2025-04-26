@@ -1,5 +1,10 @@
 #include "../include/Meal.hpp"
 
+Meal :: Meal()
+{
+    
+}
+
 Meal::Meal(int meal_id, string name, float price, Meal_type meal_type, vector<SideItem> side_items)
 {
     setmeal_id(meal_id);

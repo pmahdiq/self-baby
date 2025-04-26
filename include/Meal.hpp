@@ -31,6 +31,7 @@ class Meal
     vector<SideItem> side_items;
 
 public:
+    Meal();
     Meal(int meal_id, string name, float price, Meal_type meal_type, vector<SideItem> side_items);
     void update_price(float new_price);
     void add_side_item(SideItem item);

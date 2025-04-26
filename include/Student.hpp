@@ -16,6 +16,7 @@ class Student
     vector<Reservation> reservations;
 
 public:
+    Student();
     Student(int user_id, string student_id, string name, string email = "", float balance = 0, bool is_active = false);
     void setuser_id(int user_id);
     void setstudent_id(string student_id);

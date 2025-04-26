@@ -1,5 +1,10 @@
 #include "../include/DiningHall.hpp"
 
+DiningHall :: DiningHall()
+{
+    
+}
+
 DiningHall::DiningHall(int hall_id, string name, string address, int capacity)
 {
     sethall_id(hall_id);

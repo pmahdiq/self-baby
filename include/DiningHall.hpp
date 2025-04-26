@@ -13,6 +13,7 @@ class DiningHall
     int capacity;
 
 public:
+    DiningHall();
     DiningHall(int hall_id, string name, string address, int capacity);
     void print();
     void sethall_id(int hall_id);
