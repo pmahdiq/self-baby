@@ -1,9 +1,12 @@
 #include "../include/Reservation.hpp"
 
 Reservation::Reservation(int reservation_id, const Student &student, const DiningHall &dHall, const Meal &meal, Status status)
-    : reservation_id(reservation_id), student(student), dHall(dHall), meal(meal), status(status) 
 {
-
+    setreservation_id(reservation_id);
+    setstudent(student);
+    setdiningHall(dHall);
+    setmeal(meal);
+    setstatus(status);
 }
 
 void Reservation::setreservation_id(int reservation_id)
