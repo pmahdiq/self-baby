@@ -1,26 +1,5 @@
 #include "../include/DiningHall.hpp"
 
-using namespace std;
-class DiningHall
-{
-    int hall_id;
-    string name;
-    string address;
-    int capacity;
-
-public:
-    DiningHall(int hall_id, string name, string address, int capacity);
-    void print();
-    void sethall_id(int hall_id);
-    void setname(string name);
-    void setaddress(string address);
-    void setcapacity(int capacity);
-    int gethall_id();
-    string getname();
-    string getaddress();
-    int getcapacity();
-};
-
 DiningHall::DiningHall(int hall_id, string name, string address, int capacity)
 {
     sethall_id(hall_id);
