@@ -8,7 +8,7 @@ Student::Student(int user_id, string student_id, string name,string phone, strin
 {
     setuser_id(user_id);
     setstudent_id(student_id);
-    setname(name);
+    set_name(name);
     setemail(email);
     set_phone(phone);
     setbalance(balance);
@@ -23,11 +23,6 @@ void Student::setuser_id(int user_id)
 void Student::setstudent_id(string student_id)
 {
     this->student_id = student_id;
-}
-
-void Student::setname(string name)
-{
-    this->name = name;
 }
 
 void Student::setemail(string email)
@@ -59,11 +54,6 @@ int Student::getuser_id()
 string Student::getstudent_id()
 {
     return student_id;
-}
-
-string Student::getname()
-{
-    return name;
 }
 
 string Student::getemail()
@@ -102,6 +92,11 @@ void Student::activate()
 void Student::diactivate()
 {
     setis_active(false);
+}
+
+vector<Reservation> Student::getreservations()
+{
+    return reservations;
 }
 
 void Student::reserve_meal(Meal meal)
