@@ -5,6 +5,7 @@
 #include <vector>
 #include <ctime>
 #include "Reservation.hpp"
+#include "User.hpp"
 #include <string.h>
 
 using namespace std;

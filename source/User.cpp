@@ -2,45 +2,46 @@
 
 User::User()
 {
-   
+    
 }
 
-void User:: print() const
+void User:: print()
 {
     cout << "User ID : " << get_UserID() << "\nname : " << get_name() << "\t" << get_lastname();
 }
 void getType()
 {
-
+    
 }
-void set_UserID(int ID)
+void User::set_UserID(int ID)
 {
     _UserID = ID;
 }
-void set_name(string name)
+void User::set_name(string name)
 {
     _name = name;
 }
-void set_lastname(string lastname)
+void User::set_lastname(string lastname)
 {
-    _lastname = lastname;
+    _lastName = lastname;
 }
-void set_hPassword(string hpassword)
+void User::set_hPassword(string hpassword)
 {
-    _hPassword = hpassword;
+    _hashedPassword = hpassword;
 }
-string get_name()
+int User::get_UserID()
+{
+    return _UserID;
+}
+string User::get_name()
 {
     return _name;
 }
-string get_lastname()
+string User::get_lastname()
 {
-    return _lastname;
+    return _lastName;
 }
-string get_hPassword()
+string User::get_hPassword()
 {
     return _hashedPassword;
-}
-{
-    return _UserID;
 }

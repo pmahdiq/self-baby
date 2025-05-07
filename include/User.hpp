@@ -8,7 +8,7 @@ class User
         string _name, _lastName, _hashedPassword;
     public:  
         User();  
-        virtual void print() const;
+        virtual void print();
         virtual void getType();
         void set_UserID(int ID);
         void set_name(string name);

@@ -112,5 +112,5 @@ bool Student::cancle_reservation(Reservation reservation)
 
 void Student::print()
 {
-    cout << "User ID: " << user_id << "\nName: " << name << "\tEmail: " << email << "\nIs Active: " << is_active << "\tBalance: " << balance << endl;
+    cout << "User ID: " << get_UserID() << "\nName: " << get_name() << "\tEmail: " << getemail() << "\nIs Active: " << getis_active() << "\tBalance: " << getbalance() << endl;
 }
