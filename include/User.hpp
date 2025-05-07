@@ -6,7 +6,8 @@ class User
     protected:
         int _UserID;
         string _name, _lastName, _hashedPassword;
-    public:    
+    public:  
+        User();  
         virtual void print() const;
         virtual void getType();
         void set_UserID(int ID);
