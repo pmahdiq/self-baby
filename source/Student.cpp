@@ -4,12 +4,13 @@ Student :: Student()
     
 }
 
-Student::Student(int user_id, string student_id, string name, string email, float balance, bool is_active)
+Student::Student(int user_id, string student_id, string name,string phone, string email, float balance, bool is_active)
 {
     setuser_id(user_id);
     setstudent_id(student_id);
     setname(name);
     setemail(email);
+    set_phone(phone);
     setbalance(balance);
     setis_active(is_active);
 }
@@ -39,6 +40,12 @@ void Student::setbalance(float balance)
     this->balance = balance;
 }
 
+void Student::set_phone(string phone)
+{
+    if(phone.length() == 11)
+        _phone = phone;
+}
+
 void Student::setis_active(bool is_active)
 {
     this->is_active = is_active;
@@ -62,6 +69,11 @@ string Student::getname()
 string Student::getemail()
 {
     return email;
+}
+
+string Student::get_phone()
+{
+    return _phone;
 }
 
 float Student::getbalance()

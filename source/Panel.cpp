@@ -1,5 +1,5 @@
 #include"../include/Panel.hpp"
-void panel::addReservation(Reservation reservation)
+void Panel::addReservation(Reservation reservation)
 {
 
 }
