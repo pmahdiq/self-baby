@@ -86,6 +86,35 @@ bool Student::getis_active()
     return is_active;
 }
 
+bool Student::isActive()
+{
+    if( getis_active() == true)
+    return true;
+    else 
+    return false;  
+}
+
+void Student::activate()
+{
+    setis_active(true);
+}
+
+void Student::diactivate()
+{
+    setis_active(false);
+}
+
+void Student::reserve_meal(Meal meal)
+{
+
+}
+
+bool Student::cancle_reservation(Reservation reservation)
+{
+
+}
+
+
 void Student::print()
 {
     cout << "User ID: " << user_id << "\nName: " << name << "\tEmail: " << email << "\nIs Active: " << is_active << "\tBalance: " << balance << endl;

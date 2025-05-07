@@ -8,7 +8,7 @@
 #include <string.h>
 
 using namespace std;
-class Student
+class Student : User
 {
     int user_id;
     string student_id, name, email , _phone;
@@ -33,6 +33,9 @@ public:
     string get_phone();
     float getbalance();
     bool getis_active();
+    bool isActive();
+    void activate();
+    void diactivate();
     void reserve_meal(Meal meal);
     bool cancle_reservation(Reservation reservation);
     void print();
