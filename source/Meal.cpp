@@ -35,20 +35,11 @@ void Meal::print()
     cout << "\nSide Items: ";
     for (auto item : side_items)
     {
-        cout << static_cast<int>(item) << " ";
+        cout << item << " ";
     }
     cout << endl;
 }
 
-void Meal::update_price(float new_price)
-{
-    price = new_price;
-}
-
-void Meal::add_side_item(SideItem item)
-{
-    side_items.push_back(item);
-}
 
 void Meal::setmeal_id(int meal_id)
 {
@@ -75,6 +66,16 @@ void Meal::setside_items(vector<SideItem> side_items)
     this->side_items = side_items;
 }
 
+void Meal::set_isActive(bool isActive)
+{
+    _isActive = isActive;
+}
+
+void Meal::setReerveDay(ReserveDay day)
+{
+    reserve_day = day;
+}
+
 int Meal::getmeal_id()
 {
     return meal_id;
@@ -95,7 +96,32 @@ Meal_type Meal::getmeal_type()
     return meal_type;
 }
 
+bool Meal::get_isActive()
+{
+    return _isActive;
+}
+
+ReserveDay Meal::getReserveDay()
+{
+    return reserve_day;
+}
+
 vector<SideItem> Meal::getside_items()
 {
     return side_items;
+}
+
+void Meal::update_price(float new_price)
+{
+    price = new_price;
+}
+
+void Meal::add_side_item(SideItem item)
+{
+    side_items.push_back(item);
+}
+
+bool Meal::isActive()
+{
+    return get_isActive();
 }
