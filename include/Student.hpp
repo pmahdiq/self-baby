@@ -9,7 +9,7 @@
 #include <string.h>
 
 using namespace std;
-class Student : User
+class Student : public User
 {
     int user_id;
     string student_id, email , _phone;
