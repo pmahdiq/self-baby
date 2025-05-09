@@ -74,11 +74,6 @@ void Meal::setprice(float price)
 
 void Meal::setmeal_type(Meal_type meal_type)
 {
-    if (meal_type != Breakfast && meal_type != Lunch && meal_type != Dinner)
-    {
-        cout << "Invalid meal type" << endl;
-        return;
-    }
     this->meal_type = meal_type;
 }
 
@@ -89,14 +84,6 @@ void Meal::setside_items(vector<SideItem> side_items)
 
 void Meal::set_isActive(bool isActive)
 {
-    if (isActive == true)
-    {
-        cout << "Meal is active" << endl;
-    }
-    else
-    {
-        cout << "Meal isn't active" << endl;
-    }
     this->_isActive = isActive;
 }
 
@@ -142,7 +129,7 @@ vector<SideItem> Meal::getside_items()
 
 void Meal::update_price(float new_price)
 {
-    price = new_price;
+    setprice(new_price);
 }
 
 void Meal::add_side_item(SideItem item)

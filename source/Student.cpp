@@ -32,6 +32,11 @@ void Student::setemail(string email)
 
 void Student::setbalance(float balance)
 {
+    if(balance < 0)
+    {
+        cout << "invalid balance";
+        return;
+    }
     this->balance = balance;
 }
 
@@ -44,6 +49,11 @@ void Student::set_phone(string phone)
 void Student::setis_active(bool is_active)
 {
     this->is_active = is_active;
+}
+
+void Student::setreservation(Reservation reservation)
+{
+    reservations.push_back(reservation);
 }
 
 int Student::getuser_id()
@@ -79,9 +89,9 @@ bool Student::getis_active()
 bool Student::isActive()
 {
     if( getis_active() == true)
-    return true;
+        return true;
     else 
-    return false;  
+        return false;  
 }
 
 void Student::activate()
@@ -101,12 +111,12 @@ vector<Reservation> Student::getreservations()
 
 void Student::reserve_meal(Meal meal)
 {
-
+    
 }
 
 bool Student::cancle_reservation(Reservation reservation)
 {
-
+    reservation.setstatus(Cancelled);
 }
 
 

@@ -7,6 +7,7 @@
 #include "Reservation.hpp"
 #include "User.hpp"
 #include <string.h>
+#include <stdlib.h>
 
 using namespace std;
 class Student : public User
@@ -26,6 +27,7 @@ public:
     void setbalance(float balance);
     void setis_active(bool is_active);
     void set_phone(string phone);
+    void setreservation(Reservation reservation);
     int getuser_id();
     string getstudent_id();
     string getemail();
