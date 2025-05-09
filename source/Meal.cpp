@@ -32,6 +32,7 @@ void Meal::print()
         cout << "Unknown Meal Type";
         break;
     }
+
     cout << "\nSide Items: ";
     for (auto item : side_items)
     {
@@ -43,21 +44,41 @@ void Meal::print()
 
 void Meal::setmeal_id(int meal_id)
 {
+    if (meal_id < 0)
+    {
+        cout << "Invalid meal id" << endl;
+        return;
+    }
     this->meal_id = meal_id;
 }
 
 void Meal::setname(string name)
 {
+    if (name == "")
+    {
+        cout << "Invalid name" << endl;
+        return;
+    }
     this->name = name;
 }
 
 void Meal::setprice(float price)
 {
+    if (price < 0)
+    {
+        cout << "Invalid price" << endl;
+        return;
+    }
     this->price = price;
 }
 
 void Meal::setmeal_type(Meal_type meal_type)
 {
+    if (meal_type != Breakfast && meal_type != Lunch && meal_type != Dinner)
+    {
+        cout << "Invalid meal type" << endl;
+        return;
+    }
     this->meal_type = meal_type;
 }
 
@@ -68,7 +89,15 @@ void Meal::setside_items(vector<SideItem> side_items)
 
 void Meal::set_isActive(bool isActive)
 {
-    _isActive = isActive;
+    if (isActive == true)
+    {
+        cout << "Meal is active" << endl;
+    }
+    else
+    {
+        cout << "Meal isn't active" << endl;
+    }
+    this->_isActive = isActive;
 }
 
 void Meal::setReerveDay(ReserveDay day)

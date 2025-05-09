@@ -24,7 +24,7 @@ enum SideItem
 
 enum ReserveDay
 {
-    Satyrday,
+    Saturday,
     Sunday,
     Monday,
     Tuesday,
